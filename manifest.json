@@ -1,6 +1,6 @@
 {
     "name": "WardIsLoveWeatherPatch",
-    "version_number": "1.0.0",
+    "version_number": "1.0.1",
     "website_url": "",
     "description": "Companion patch for Ward Is Love: lets weather (rain/snow/ash) and the Wet debuff back inside ward bubbles, while keeping the ward's structure weather-damage protection intact.",
     "dependencies": [

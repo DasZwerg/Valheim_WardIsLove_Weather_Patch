@@ -5,13 +5,13 @@ A small companion patch for [Ward Is Love](https://thunderstore.io/c/valheim/p/A
 Newer versions of Ward Is Love hard-block weather inside wards with no option to disable it:
 
 - Rain, snow and ash particles are hidden while you're inside an active ward bubble.
-- The bubble's collider counts as a roof, so the **Wet** debuff (and shelter checks) never apply inside.
+- Wards count as vanilla shield generators, and Valheim never applies the **Wet** debuff inside a shield.
 
 This patch restores both, **without** touching the features you probably want to keep:
 
 - `No Weather Damage` still protects structures inside the ward from rain decay.
 - `No Heavy Snow Damage`, `No Ash Damage`, `No Lava Damage` are untouched.
-- Everything else Ward Is Love does is untouched — this mod only contains two Harmony postfix patches.
+- Everything else Ward Is Love does is untouched. The shield override only applies to the local player's Wet check, so plants, cinders and structures still treat wards as shields.
 
 ## Config
 
@@ -20,7 +20,7 @@ This patch restores both, **without** touching the features you probably want to
 | Setting | Default | Effect |
 |---|---|---|
 | `AllowWeatherParticlesInsideWard` | `true` | Rain/snow/ash render inside ward bubbles again. |
-| `AllowWetDebuffInsideWard` | `true` | The ward dome no longer counts as a roof for cover checks, so you get Wet in the rain. Real roofs you build inside the ward still shelter you. |
+| `AllowWetDebuffInsideWard` | `true` | You get Wet in the rain inside wards again. Real roofs and vanilla shield generators still keep you dry. |
 
 ## Notes
 
@@ -28,6 +28,9 @@ This patch restores both, **without** touching the features you probably want to
 - If Ward Is Love updates and renames its internals, this mod logs a warning and quietly does nothing rather than breaking your game.
 
 ## Changelog
+
+### 1.0.1
+- Fixed the Wet debuff not applying inside wards on current Valheim.
 
 ### 1.0.0
 - Initial release.
